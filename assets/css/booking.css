@@ -1,4 +1,14 @@
-header {
+/* Elements */
+main, .myMain {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header, .myHeader {
     display: flex;
     justify-content: right;
     padding-right: 20px;
@@ -6,6 +16,108 @@ header {
     width: 100%;
 }
 
-button {
-    margin: 8px;
+h2  {
+    color: white;
+    font-size: 1rem;
+    margin-left: 20px;
 }
+
+aside, .filterDate {
+    flex: 0 0 300px;
+    margin-left: 20px;
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+aside h2 {
+    color: darkgreen
+}
+
+
+/* Classes */
+.date {
+    padding: 10px;   
+    width: 100%;
+    
+}
+
+.selDate {
+    gap: 10%;
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    flex:1;
+    padding-right: 20px
+    }
+ 
+
+.filterDate {
+    max-width: 30%;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    
+}
+
+.btnDiv {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    position:relative;
+    width:100%;
+    bottom: -2rem; 
+
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: darkgreen;
+    color: white;
+    text-align: right;
+    flex: 1;
+}
+
+.btnAM, .btnPM {
+    text-align: center;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 1em;
+    display: flex;
+    font-size: 1rem;
+    
+}
+
+.h5 {
+    text-align: left;
+    width: 7rem;
+}
+
+.filterBtnDiv {
+    display: flex;
+    justify-content: center;
+}
+
+/* IDs */
+#btnShowMore, #btnSeeLast{
+    width:20%;
+}
+
+#btnShowMore, #btnStartOver, #btnSave, #btnSeeLast, #btnFilter {
+    border-radius: 100px;
+    background-color:darkcyan;
+    padding: 14px 20px;
+    margin: 8px;
+    width: 10rem;
+}
+
