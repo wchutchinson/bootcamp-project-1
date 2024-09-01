@@ -98,6 +98,8 @@ aside h2 {
     
 }
 
+
+
 .h5 {
     text-align: left;
     width: 7rem;
@@ -106,6 +108,11 @@ aside h2 {
 .filterBtnDiv {
     display: flex;
     justify-content: center;
+}
+
+.hour-btn.selected {
+    background-color: darkolivegreen;
+    color: white;
 }
 
 /* IDs */
@@ -120,4 +127,5 @@ aside h2 {
     margin: 8px;
     width: 10rem;
 }
+
 
