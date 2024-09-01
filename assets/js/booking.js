@@ -4,28 +4,109 @@ $(document).ready(function() {
         format: 'mm/dd/yyyy',  // Date format
         autoclose: true,       // Close the datepicker automatically after date selection
         todayHighlight: true,   // Highlight today's date
-        orientation: 'bottom auto'
+        orientation: 'bottom auto',
+        startDate: new Date()   // Start date is today's date
         
     });
 
     // Get today's date
     let today = new Date();
     
-    //Format the date to strin as MM/DD/YYYY
-    formatDateToString(today);
+    // Set the datepicker value to today's date
+    $('#datepicker').val(formatDate(today));
 
-    // Set the formatted date as the value of the datepicker input
-    $('#datepicker').val(formatDateToString(today));
+    // Initial dates appended
+    updateDates();
+
+    // Listen for the datepicker and the change date event
+    $('#datepicker').on('changeDate', function() {
+        // Clear previous dates from DOM
+        clearDates();
+        // Update the dates based on the newly selected date
+        updateDates();
+    });
     
-    let startDate = $('#datepicker').val();
-    let endDate = formatDateToString(addDays(startDate, 4));
+    function updateDates(){
+        let startDate = $('#datepicker').val();
+        let endDate = formatDateToString(addDays(startDate, 4));
+        let datesWithDaysArray = getDatesWithDays(startDate, endDate)
+        appendDates(datesWithDaysArray);
+    }
 
-    let datesWithDaysArray = getDatesWithDays(startDate, endDate)
-    console.log(datesWithDaysArray);
+    function clearDates(){
+        const dateElements = document.querySelectorAll('.date');
+        dateElements.forEach(date => {
+            date.remove();
+        });
+    }
 
-    // Append the dates to the DOM
-    appendDates(datesWithDaysArray);
+    document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('hour-btn')) {
+            const buttons = document.querySelectorAll('.hour-btn');
+            buttons.forEach(button => {
+                button.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+        }
+    });
+
+    const saveButton = document.querySelector('#btnSave');
+    saveButton.addEventListener('click', function () {
+        const selectedButton = document.querySelector('.hour-btn.selected');
+        if (selectedButton) {
+            let apptHour = selectedButton.textContent;
+            const dateElement = selectedButton.closest('.date').querySelector('h2');
+            let apptDate = dateElement.textContent;
+
+            // get name from index.html page
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            // Extract the name from the query string
+            //let name = urlParams.get('name'); //uncomment this line to get the name from the query string
+            let name = "John Doe"; //comment this line if you want to get the name from the query string
+
+            if (name || apptDate || apptHour) {
+                storeLocalStorage(name, apptDate, apptHour);
+            }else {
+                alert('No name, date or time selected');
+            }
+        } else {
+            alert('Please select a time');
+        }
+    });
+
+    const startOver = document.querySelector('#btnStartOver');
+    startOver.addEventListener('click', function () {
+        redirectPage('index.html');
+    });
 });
+
+function storeLocalStorage (name, date, time) {
+    // Get the existing arrow from local storage, or create a new array if none exists
+    let storedData = JSON.parse(localStorage.getItem('appointments')) || [];
+
+    //create a new entry with provided data
+    const newAppt = {
+        name: name,
+        date: date,
+        time: time
+    };
+
+    storedData .push(newAppt);
+
+    //Save the updated array to local storage
+    localStorage.setItem('appointments', JSON.stringify(storedData));
+    console.log ('New entry added:', newAppt)
+    console.log ('Updated Schedule:', storedData);
+}
+
+// function to format the date as MM/DD/YYYY
+function formatDate(date){
+    const formattedDate = `${pad(date.getMonth() + 1)}/${pad(date.getDate())}/${pad(date.getFullYear())}`;
+    console.log(formattedDate);
+    return formattedDate;
+} 
 
 function formatDateToString(date){
     const monthNames = [
@@ -70,6 +151,7 @@ function getDatesWithDays (startDate, endDate){
     return datesWithDays;
 }
 
+// function to append dates to the page
 function appendDates(datesWithDaysArray){
     const btnDiv = document.querySelector('.btnDiv');
 
@@ -102,4 +184,13 @@ function appendDates(datesWithDaysArray){
         btnDiv.parentNode.insertBefore(newDiv, btnDiv);
     });
 }
-    
+
+function pad(num) {
+    return num.toString().padStart(2, '0');
+}
+
+let redirectUrl = '';
+const redirectPage = function (url) {
+    redirectUrl = url;
+    location.assign(url);
+}
