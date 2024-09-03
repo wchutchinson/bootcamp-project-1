@@ -1,3 +1,7 @@
+body {
+    background-color: #396a93;
+}
+
 .button-container {
     display: flex;
     flex-direction: column;
@@ -9,9 +13,10 @@
     font-size: 25px;
     background-color: #03375d;
     color: white;
-    border: 10px solid #396a93;
+    border: 10px solid white;
     border-radius: 25px;
-    margin-bottom: 75px;
+    margin-top: 10px;
+    height: 75px;
     width: 95%;
     box-sizing: border-box;
 }
@@ -19,23 +24,27 @@
 .small-button {
     padding: 5px 10px;
     font-size: 20px;
-    background-color: #0d8f34;
+    background-color: #0a7e2d;
     color: white;
-    border: 5px solid #03375d;
+    border: 15px solid #03375d;
     border-radius: 5px;
-    margin-bottom: 50px;
+    margin-top: 125px;
+    height: 100px;
     width: 40%;
     box-sizing: border-box;
 }
 
 .large-button-2 {
+    position: fixed;
+    bottom: 0;
     padding: 10px 20px;
     font-size: 15px;
     background-color: #03375d;
     color: white;
-    border: 10px solid #396a93;
+    border: 10px solid white;
     border-radius: 25px;
-    margin-bottom: 75px;
+    margin-bottom: 10px;
+    height: 75px;
     width: 95%;
     box-sizing: border-box;
 }
