@@ -111,7 +111,7 @@ aside h2 {
 }
 
 .hour-btn.selected {
-    background-color: darkolivegreen;
+    background-color: #396a93;
     color: white;
 }
 
@@ -122,7 +122,7 @@ aside h2 {
 
 #btnShowMore, #btnStartOver, #btnSave, #btnSeeLast, #btnFilter {
     border-radius: 100px;
-    background-color:darkcyan;
+    background-color: #396a93;
     padding: 14px 20px;
     margin: 8px;
     width: 10rem;

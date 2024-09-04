@@ -3,7 +3,7 @@
 }
 
 button, .hour-btn{
-    background-color: #4CAF50;
+    background-color: #0a7e2d;
     color: white;
     padding: 14px 20px;
     margin: 8px;
@@ -15,5 +15,5 @@ button, .hour-btn{
 }
 
 body, .myBody {
-    background-color: darkgreen;
+    background-color: #03375d;
 }
