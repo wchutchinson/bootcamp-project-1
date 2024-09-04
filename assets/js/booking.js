@@ -63,8 +63,8 @@ $(document).ready(function() {
             const urlParams = new URLSearchParams(queryString);
             
             // Extract the name from the query string
-            //let name = urlParams.get('name'); //uncomment this line to get the name from the query string
-            let name = "John Doe"; //comment this line if you want to get the name from the query string
+            let name = urlParams.get('name'); //uncomment this line to get the name from the query string
+            //let name = "John Doe"; //comment this line if you want to get the name from the query string
 
             if (name || apptDate || apptHour) {
                 storeLocalStorage(name, apptDate, apptHour);

@@ -1,5 +1,5 @@
 const largeButton = document.getElementById('largeButton');
-const smallButton1 = document.getElementById('smallButton1');
+const smallButton1 = document.getElementById('schAppt');
 const smallButton2 = document.getElementById('smallButton2');
 const largeButton2 = document.getElementById('largeButton2')
 
@@ -8,7 +8,9 @@ largeButton.addEventListener('click', function() {
 });
 
 smallButton1.addEventListener('click', function() {
-    window.location.href = 'https://www.example.com/page1'; // Replace 'https://www.example.com/page1' with the URL you want to redirect to
+    // Data to pass
+let name = "Jane Doe";
+window.location.href = `booking.html?name=${encodeURIComponent(name)}`;
 });
 
 smallButton2.addEventListener('click', function() {
@@ -18,6 +20,8 @@ smallButton2.addEventListener('click', function() {
 largeButton2.addEventListener('click', function() {
     alert('You clicked the large button!');
 });
+
+
 
 //QUESTIONS
 
