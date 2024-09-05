@@ -9,6 +9,8 @@ $(document).ready(function() {
         
     });
 
+
+
     // Get today's date
     let today = new Date();
     
@@ -68,6 +70,7 @@ $(document).ready(function() {
 
             if (name || apptDate || apptHour) {
                 storeLocalStorage(name, apptDate, apptHour);
+                redirectPage('appointments.html');
             }else {
                 alert('No name, date or time selected');
             }
@@ -80,6 +83,8 @@ $(document).ready(function() {
     startOver.addEventListener('click', function () {
         redirectPage('index.html');
     });
+
+    window.onload(showModal());
 });
 
 function storeLocalStorage (name, date, time) {
@@ -160,7 +165,7 @@ function appendDates(datesWithDaysArray){
         let newDiv = document.createElement('div');
         newDiv.className = 'date';
 
-        // Create <h2> element and set its text
+        // Create <h2> element and set its text7
         let newH2 = document.createElement('h2');
         newH2.textContent = dateInfo.day + ', ' + dateInfo.date;
 
