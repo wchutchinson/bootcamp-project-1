@@ -1,16 +1,24 @@
 const largeButton = document.getElementById('largeButton');
 const smallButton1 = document.getElementById('schAppt');
 const smallButton2 = document.getElementById('smallButton2');
-const largeButton2 = document.getElementById('largeButton2')
+const largeButton2 = document.getElementById('largeButton2');
+const dialog = document.getElementById('dialog');
+const submit = document.getElementById('btnSubmit');
+const NameInput = document.getElementById('nameInput');
+
 
 largeButton.addEventListener('click', function() {
     alert('You clicked the large button!');
 });
 
 smallButton1.addEventListener('click', function() {
-    // Data to pass
-let name = "Jane Doe";
-window.location.href = `booking.html?name=${encodeURIComponent(name)}`;
+    dialog.showModal();
+});
+
+submit.addEventListener('click', function() {
+    const nameValue = nameInput.value;
+    window.location.href = `booking.html?name=${encodeURIComponent(nameValue)}`;
+    //dialog.close();
 });
 
 smallButton2.addEventListener('click', function() {
