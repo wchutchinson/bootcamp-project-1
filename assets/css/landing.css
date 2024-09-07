@@ -1,54 +1,89 @@
-body {
-    background-color: #396a93;
-}
+/* General body styling */
+.body {
+    background-color: #6d93b4; /* Light blue background for a soft and calming effect */
+    color: #333; /* General text color for contrast against light backgrounds */
+    font-family: Arial, sans-serif;
+}   
 
-.button-container {
+.main {
+    height: 70vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.large-button {
-    padding: 10px 20px;
-    font-size: 25px;
-    background-color: #03375d;
-    color: white;
-    border: 10px solid white;
-    border-radius: 25px;
+
+/* Header styling */
+.header {
+    background-color: #003366; /* Dark blue for header */
+    color: #ffffff; /* White text for good contrast */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header h3 {
+    font-size: 1.5em;
     margin-top: 10px;
-    height: 75px;
-    width: 95%;
-    box-sizing: border-box;
 }
 
-.small-button {
-    padding: 5px 10px;
-    font-size: 20px;
-    background-color: #0a7e2d;
-    color: white;
-    border: 15px solid #03375d;
-    border-radius: 5px;
-    margin-top: 125px;
-    height: 100px;
-    width: 40%;
-    box-sizing: border-box;
+/* Button styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-.large-button-2 {
-    position: fixed;
-    bottom: 0;
+.button-container button {
+    background-color: #008080; /* Greenish-blue for buttons */
+    color: #ffffff;
+    border: none;
     padding: 10px 20px;
-    font-size: 15px;
-    background-color: #03375d;
-    color: white;
-    border: 10px solid white;
-    border-radius: 25px;
-    margin-bottom: 10px;
-    height: 75px;
-    width: 95%;
-    box-sizing: border-box;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.button-container button:hover {
+    background-color: #005f5f; /* Darker green-blue for hover effect */
+}
+
+/* Footer styling */
+footer {
+    background-color: #003366; /* Same dark blue as header for consistency */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin: 5px 0;
+}
+
+/* Utility classes */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Dialog styling */
 dialog {
     position: fixed;
     top: 50%;
@@ -76,7 +111,7 @@ dialog form div {
 input[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: green;
+    background-color: #008080;
     color: white;
     border: none;
     cursor: pointer;
@@ -89,4 +124,15 @@ input[type="submit"]:hover {
 form div {
     padding-top: 2rem;
     cursor: pointer;
+}
+
+#schAppt, #viewAppt {
+    padding: 3rem 6rem;
+    border-radius: 5px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    min-width: 50%;
+    font-size: 2rem;
 }
