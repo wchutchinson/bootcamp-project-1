@@ -17,58 +17,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <!-- Bootstrap Datepicker JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <title>Event Booking Site</title>
+    <title>Event Bookings</title>
 </head>
-
-<body class="myBody">
-    <header class="myHeader">
-        <button id="btnStartOver">Start Over</button>
-        <button id="btnSave">Save</button>
-    </header>
-
-    <main class="myMain">
-        <div class="selDate">
-            <div class="btnDiv">
-                <!--<button id="btnShowMore">Show More</button>
-                <button id="btnSeeLast">See Last</button>-->
+<body class="body">
+    <header></header>
+    <main class="main">
+        <div class="centerDiv">
+            <div class="filterDate"> 
+                <div class="container">
+                    <div class="form-group">
+                        <label for="datepicker"></label>
+                        <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY">
+                    </div>
+                </div>
             </div>
         </div>
-        <aside class="filterDate"> 
-            <div class="container mt-5">
-                <h2>Do you have a date in mind?</h2>
-                <div class="form-group">
-                    <label for="datepicker"></label>
-                    <input type="text" class="form-control" id="datepicker" placeholder="MM/DD/YYYY">
-                </div>
-            </div>
-            <dialog open>
-                <p>Greetings, one and all!</p>
-                <form method="dialog">
-                  <button>OK</button>
-                </form>
-            </dialog>
-            <!--<div>
-                <h4>Filter By:</h4>
-                <div>
-                    <div class="days"><h5 class="h5">Monday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="days"><h5 class="h5">Tuesday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="days"><h5 class="h5">Wednesday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="days"><h5 class="h5">Thursday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="days"><h5 class="h5">Friday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="days"><h5 class="h5">Saturday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="days"><h5 class="h5">Sunday</h5><button class="btnAM">AM</button><button class="btnPM">PM</button></div>
-                    <div class="filterBtnDiv"><button id="btnFilter">Filter</button></div>
-                </div>
-
-            </div>-->
-        </aside>
+        <div class="selDate">
+            <div class="btnDiv"></div>
+        </div>
+        <div class="navBtn">
+            <button id="btnStartOver">Start Over</button>
+            <button id="btnSave">Save</button>
+        </div>
     </main>
-
     <footer>
-
+        <script src="./assets/scripts/script.js"></script>
+        <script src="./assets/js/booking.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </footer>
 </body>
-<script src="./assets/scripts/script.js"></script>
-<script src="./assets/js/booking.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>

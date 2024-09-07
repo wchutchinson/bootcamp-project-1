@@ -2,8 +2,13 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
+.main {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 button, .hour-btn{
-    background-color: #0a7e2d;
+    background-color: #008080;
     color: white;
     padding: 14px 20px;
     margin: 8px;
@@ -14,7 +19,7 @@ button, .hour-btn{
     font-size: 1rem;
 }
 
-body, .myBody {
+.body {
     background-color: #03375d;
 }
 
@@ -28,4 +33,27 @@ dialog {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+}
+
+#btnOK {
+    padding: 10px 20px, 10px 20px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+}
+
+#btnOK:hover {
+    background-color: #0056b3;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    width: 40vw;
+    
 }

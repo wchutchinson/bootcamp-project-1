@@ -6,33 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/landing.css" />
-    <title> Event Bookings </title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <!-- Bootstrap Datepicker CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+     <!-- Bootstrap Datepicker JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <title>Event Bookings</title>
 </head>
 
 <body>
-
-    <div class="button-container">
-        <button id = "largeButton" class="large-button"> Event Bookings @ Rolling Hills CC </button>
-        <button id="schAppt" class="small-button"> Schedule Appointment </button>
-        <button id ="smallButton2" class="small-button"> View Existing Appointment </button>
-        <button id = "largeButton2" class="large-button-2"> Address: 2722 W.Roosevelt Blvd, Monroe, NC, 28110  ----  Phone: 704-289-4561 </button>
-        <dialog id="dialog">
-            <form method="dialog">
-              <p>
-                <label>
-                  Please enter your name:
-                  <input id="nameInput" type="text" required />
-                </label>
-              </p>
-              <div>
-                <input type="submit" id="btnSubmit" value="Submit" />
-              </div>
-            </form>
-          </dialog>
-          <output></output>
-    
-    </div>
-
+    <header class="header">
+        <h1>Welcome to Rolling Hills Country Club </h1>
+        <h3>Schedule your event today! </h3>
+    </header>
+    <main class="main">
+        <div class="button-container">
+            <button id="schAppt"> Schedule Appointment</button>
+            <button id="viewAppt"> View Existing Appointment </button>
+            <dialog id="dialog">
+                <form method="dialog">
+                    <p>
+                        <label>
+                            Hi, what's your name?:
+                            <input id="nameInput" type="text" required />
+                        </label>
+                    </p>
+                    <div>
+                        <input type="submit" id="btnSubmit" value="Submit" />
+                    </div>
+                </form>
+            </dialog>
+            <output></output>
+        </div>
+    </main>
+    <footer>
+        <span>
+            <ul>
+                <li>Address: 2722 W.Roosevelt Blvd, Monroe, NC, 28110</li>
+                <li>Phone: 704-289-4561</li>
+                <li>Email: events@rhcc.com</li>
+            </ul> 
+        </span>
+    </footer>
     <script src="./assets/js/script.js"></script>
 </body>
 

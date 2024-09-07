@@ -9,7 +9,9 @@ $(document).ready(function() {
         
     });
 
-
+    // get name from index.html page
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
 
     // Get today's date
     let today = new Date();
@@ -61,12 +63,11 @@ $(document).ready(function() {
             let apptDate = dateElement.textContent;
 
             // get name from index.html page
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
+            //const queryString = window.location.search;
+            //const urlParams = new URLSearchParams(queryString);
             
             // Extract the name from the query string
-            let name = urlParams.get('name'); //uncomment this line to get the name from the query string
-            //let name = "John Doe"; //comment this line if you want to get the name from the query string
+            //let name = urlParams.get('name');
 
             if (name || apptDate || apptHour) {
                 storeLocalStorage(name, apptDate, apptHour);
@@ -84,7 +85,15 @@ $(document).ready(function() {
         redirectPage('index.html');
     });
 
-    window.onload(showModal());
+    // Extract name from query string and build h4 elemetn to greet the user.
+    let name = urlParams.get('name');
+    let newH4 = document.createElement('h4');
+    newH4.textContent = 'Hello ' + name + '!' + ' Please select a date and time for your appointment.';
+    let container = document.querySelector('.container');
+    container.appendChild(newH4);
+
+    // Insert the new h4 before the datepicker element
+    container.parentNode.insertBefore(newH4, container);
 });
 
 function storeLocalStorage (name, date, time) {
@@ -165,7 +174,7 @@ function appendDates(datesWithDaysArray){
         let newDiv = document.createElement('div');
         newDiv.className = 'date';
 
-        // Create <h2> element and set its text7
+        // Create <h2> element and set its text
         let newH2 = document.createElement('h2');
         newH2.textContent = dateInfo.day + ', ' + dateInfo.date;
 

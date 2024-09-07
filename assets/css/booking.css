@@ -1,82 +1,78 @@
 /* Elements */
-main, .myMain {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-header, .myHeader {
+header,
+.myHeader {
     display: flex;
     justify-content: right;
     padding-right: 20px;
     padding-top: 20px;
     width: 100%;
+    margin-right: 20%;
 }
 
-h2  {
+h2 {
     color: white;
     font-size: 1rem;
     margin-left: 20px;
 }
 
-aside, .filterDate {
-    flex: 0 0 300px;
-    margin-left: 20px;
-    background-color: lightgreen;
-    padding: 10px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-}
-
-aside h2 {
-    color: darkgreen
-}
-
-
 /* Classes */
 .date {
-    padding: 10px;   
+    padding: 10px;
     width: 100%;
-    
+    max-width: 200%
+
+}
+
+.filterDate {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width:50%;
+    background-color: #008080;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+}
+
+.container h2 {
+    color: darkgreen;
+    margin: 0;
 }
 
 .selDate {
     gap: 10%;
     display: flex;
     flex-direction: column;
-    max-width: 70%;
-    flex:1;
-    padding-right: 20px
-    }
- 
-
-.filterDate {
-    max-width: 30%;
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-    
+    max-width: 100%;
+    flex: 1;
+    padding-right: 20px;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnDiv {
     display: flex;
     padding-top: 20px;
     justify-content: center;
-    position:relative;
-    width:100%;
-    bottom: -2rem; 
+    position: relative;
+    width: 100%;
+    bottom: -2rem;
 
+}
+
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
 }
 
 .days {
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     padding: 10px;
     margin: 10px;
     border-radius: 12px;
@@ -86,7 +82,8 @@ aside h2 {
     flex: 1;
 }
 
-.btnAM, .btnPM {
+.btnAM,
+.btnPM {
     text-align: center;
     border-radius: 50%;
     justify-content: center;
@@ -95,10 +92,7 @@ aside h2 {
     width: 1em;
     display: flex;
     font-size: 1rem;
-    
 }
-
-
 
 .h5 {
     text-align: left;
@@ -115,17 +109,25 @@ aside h2 {
     color: white;
 }
 
-/* IDs */
-#btnShowMore, #btnSeeLast{
-    width:20%;
+.hour-btn {
+    min-height: 52px;
+    min-width: 117px;
 }
 
-#btnShowMore, #btnStartOver, #btnSave, #btnSeeLast, #btnFilter {
+.navBtn {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* IDs */
+#btnStartOver,
+#btnSave {
     border-radius: 100px;
     background-color: #396a93;
     padding: 14px 20px;
     margin: 8px;
     width: 10rem;
+    flex-wrap: wrap;
 }
-
-
