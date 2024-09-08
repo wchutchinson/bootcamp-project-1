@@ -1,7 +1,7 @@
    html{
-    background-color: #396a93;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    background-color: #03375d;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
    }
 
    header{
@@ -13,8 +13,8 @@
     border-radius: 15px;
     border-style: solid;
     border-width: 5px;
-    border-color: #000000;
-    background-color: darkblue;
+    border-color: white;
+    background-color: #008080;
     padding: 10px;
     font-size: 35px;
 }
@@ -28,14 +28,15 @@ main{
     border-radius: 15px;
     border-style: solid;
     border-width: 5px;
-    border-color: #000000;
+    border-color: #008080;
+    background-color: white;
     padding: 10px;
     font-size: 25px;
 }
 
 h1{
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .appointment-list{
@@ -51,8 +52,8 @@ h1{
     border-radius: 15px;
     border-style:solid;
     border-width: 5px;
-    border-color: #000000;
-    background-color: #396a93;
+    border-color: #03375d;
+    background-color:#008080 ;
     padding: 10px;
 
     overflow-y: hidden;
@@ -67,9 +68,10 @@ h1{
     border-radius: 15px;
     border-style: solid;
     border-width: 1px;
-    border-color: #000000;
-    background-color: #396a93;
+    border-color: white;
+    background-color: #03375d;
     padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer{
@@ -78,11 +80,20 @@ footer{
 }
 
 button{
-    border-radius: 30px;
+    /* border-radius: 30px;
     width: 10%;
     height: 15%;
     font-size: x-large;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif; */
+
+    border-radius: 100px;
+    background-color: #396a93;
+    padding: 14px 20px;
+    margin: 8px;
+    width: 10rem;
+    flex-wrap: wrap;
+    color: white;
+    font-size: x-large;
 }
 
 @media screen and (max-width: 750px){

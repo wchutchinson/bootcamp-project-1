@@ -16,10 +16,10 @@ for (let i = 0; i < storedData.length; i++) {
   console.log(storedData[i]);
 
     appointments.innerHTML += `<div class="box"> 
-    <h2>Appointment ${i+1} </h2>
-    <p>Appointment name: ${storedData[i].name} </p> 
-    <p>Appointment date: ${storedData[i].date} </p>
-     <p>Appointment time: ${storedData[i].time} </p>
+    
+    <p>Name: ${storedData[i].name} </p> 
+    <p>Date: ${storedData[i].date} </p>
+     <p>Time: ${storedData[i].time} </p>
         </div>`;
 };
 
