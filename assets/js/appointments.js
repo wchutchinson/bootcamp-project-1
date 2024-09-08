@@ -1,20 +1,25 @@
 const doneButton = document.querySelector('#done-button');
 let box = document.querySelector('.box');
 let appointments = document.querySelector('.appointment-list');
-let names = ['John Doe', 'Jane Doe', 'James Doe', 'Jenny Doe'];
 
 doneButton.addEventListener('click', () => {
-  alert('Done button clicked');
-
   //redirect to the landing page
-    window.location.href = 'https://g.co/kgs/2gijikW';
+    window.location.href = 'index.html';
 });
-for (let i = 0; i < names.length; i++) {
-    appointments.innerHTML += `<div class="box"> <h2>Appointment ${i+1} </h2> 
-    <p>Appointment date: 2021-09-10</p>
-     <p>Appointment time: ${names[i]} </p>
-      <p>Appointment type: Consultation</p>
-       <p>Appointment status: Done</p>
+
+//get the data from the local storage
+let storedData = JSON.parse(localStorage.getItem('appointments')) || [];
+
+console.log(storedData);
+
+for (let i = 0; i < storedData.length; i++) {
+  console.log(storedData[i]);
+
+    appointments.innerHTML += `<div class="box"> 
+    <h2>Appointment ${i+1} </h2>
+    <p>Appointment name: ${storedData[i].name} </p> 
+    <p>Appointment date: ${storedData[i].date} </p>
+     <p>Appointment time: ${storedData[i].time} </p>
         </div>`;
 };
 
