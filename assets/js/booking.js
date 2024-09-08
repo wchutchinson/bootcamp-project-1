@@ -62,13 +62,6 @@ $(document).ready(function() {
             const dateElement = selectedButton.closest('.date').querySelector('h2');
             let apptDate = dateElement.textContent;
 
-            // get name from index.html page
-            //const queryString = window.location.search;
-            //const urlParams = new URLSearchParams(queryString);
-            
-            // Extract the name from the query string
-            //let name = urlParams.get('name');
-
             if (name || apptDate || apptHour) {
                 storeLocalStorage(name, apptDate, apptHour);
                 redirectPage('appointments.html');
@@ -82,7 +75,7 @@ $(document).ready(function() {
 
     const startOver = document.querySelector('#btnStartOver');
     startOver.addEventListener('click', function () {
-        redirectPage('index.html');
+    redirectPage('index.html');
     });
 
     // Extract name from query string and build h4 elemetn to greet the user.

@@ -1,21 +1,26 @@
-const largeButton = document.getElementById('largeButton');
-const smallButton1 = document.getElementById('schAppt');
-const smallButton2 = document.getElementById('smallButton2');
-const largeButton2 = document.getElementById('largeButton2');
+const schAppt = document.getElementById('schAppt');
 const dialog = document.getElementById('dialog');
 const submit = document.getElementById('btnSubmit');
 const nameInput = document.getElementById('nameInput');
+const cancelButton = document.getElementById('btnClose');
+const viewAppt = document.getElementById('viewAppt');
 
-
-smallButton1.addEventListener('click', function() {
+schAppt.addEventListener('click', function() {
     dialog.showModal();
 });
 
 submit.addEventListener('click', function() {
-    const nameValue = nameInput.value;
-    window.location.href = `booking.html?name=${encodeURIComponent(nameValue)}`;
+    if (!nameInput.value) {
+    return;
+    }
+    window.location.href = `booking.html?name=${encodeURIComponent(nameInput.value)}`;
 });
 
-smallButton2.addEventListener('click', function() {
-    window.location.href = 'https://www.example.com/page2';
+// Add Cancel button to dialog
+cancelButton.addEventListener('click', function() {
+    dialog.close();
+});
+
+viewAppt.addEventListener('click', function() {
+    redirectPage('appointments.html');
 });
